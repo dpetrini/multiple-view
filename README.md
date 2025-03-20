@@ -1,4 +1,4 @@
-# multiple-view
+# Multiple-view
 Multiple view inference models for breast cancer detection.
 This is the inference code of the Multiple View classifiers to classify the two mammography views at once. It was trained in CBIS-DDSM dataset and in VinDr-Mammo with original test split. It means that any pair of mammograms in test set can be used in this inference.
 
