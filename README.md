@@ -2,6 +2,13 @@
 Multiple view inference models for breast cancer detection.
 This is the inference code of the Multiple View classifiers to classify the two mammography views at once. It was trained in CBIS-DDSM dataset and in VinDr-Mammo with original test split. It means that any pair of mammograms in test set can be used in this inference.
 
+## Update: new source code inserted 
+
+Dataloaders for single-view and two-view. New in folder Dataloader.
+
+Keep watching this repository as more code will be added soon.
+If you have any inquire or request please use the issues tab.
+
 ## Instructions for inference with multiple views
 
 python3 multi_view_clf_test.py -h
@@ -39,8 +46,15 @@ cv2
 
 
 ### Reference
-If you use want to know more, please check complete text HERE. If you want to cite this work please use reference below.
+If you use want to know more, please check complete text [HERE](https://arxiv.org/abs/2503.19945). If you want to cite this work please use reference below.
 
 ```
-@ARTICLE{
+@misc{petrini2025optimizingbreastcancerdetection,
+      title={Optimizing Breast Cancer Detection in Mammograms: A Comprehensive Study of Transfer Learning, Resolution Reduction, and Multi-View Classification}, 
+      author={Daniel G. P. Petrini and Hae Yong Kim},
+      year={2025},
+      eprint={2503.19945},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV},
+      url={https://arxiv.org/abs/2503.19945}, 
 }
