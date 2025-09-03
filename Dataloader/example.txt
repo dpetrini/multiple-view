@@ -1,0 +1,30 @@
+# Below is a code example on how to use the available dataset classes
+#  for pytorch based dataloaders:
+
+
+from dataset_full import MyDataset   # load our dataset class
+
+train_image_paths = prefix+'/train'
+validation_image_paths = prefix+'/val'
+test_image_paths = prefix+'/test'
+
+# classe dataset que carregar arquivos e faz transformacoes
+dataset_train = MyDataset(train_image_paths, set_type='train', dataset=DATASET)
+dataset_val = MyDataset(validation_image_paths, set_type='val', dataset=DATASET)
+dataset_test = MyDataset(test_image_paths, set_type='test', dataset=DATASET)
+
+print('Size train:', len(dataset_train), ' Size val: ', len(dataset_val))
+
+n_samples = len(dataset_train) + len(dataset_val)
+
+# DataLoader eh iterador que retorna tensores pytorch
+train_dataloader = DataLoader(dataset_train, batch_size=MINI_BATCH_SINGLE,
+                              shuffle=True,
+                              num_workers=2, pin_memory=True,
+                              drop_last=True)   # drop_last for ResNest50...
+val_dataloader = DataLoader(dataset_val, batch_size=MINI_BATCH_SINGLE,
+                            shuffle=False, num_workers=2, pin_memory=True,
+                            drop_last=True)
+test_dataloader = DataLoader(dataset_test, batch_size=MINI_BATCH_SINGLE,
+                             shuffle=False, num_workers=1, pin_memory=True,
+                             drop_last=True)
