@@ -35,6 +35,8 @@ Obs. Some sample files from CBIS-DDSM test set are included in samples folder fo
 
 Obs2. In order to perform test inference download all models from [link](https://drive.google.com/drive/folders/1aQqX2F5f62D2GZOeZmGrmPvwLy_tG9Tr?usp=sharing) and place it in "models" folder.
 
+New: the multiple-views models for CBIS-DDSM and VinDr-Mammo are now available at [Hugging Face](https://huggingface.co/dpetrini). Download and follow the instructions above.
+
 ### Dependencies
 argparse
 
