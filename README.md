@@ -9,6 +9,9 @@ Dataloaders for single-view and two-view. New in folder Dataloader.
 Keep watching this repository as more code will be added soon.
 If you have any inquire or request please use the issues tab.
 
+Also, check the library we use for training the models: [https://github.com/dpetrini/nova](https://github.com/dpetrini/nova)
+
+
 ## Instructions for inference with multiple views
 
 python3 multi_view_clf_test.py -h
