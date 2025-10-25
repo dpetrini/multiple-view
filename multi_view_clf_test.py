@@ -167,8 +167,14 @@ def main():
 
 
     ap = argparse.ArgumentParser(description='[Poli-USP] Two Views Breast Cancer inference 2024 Version')
-    ap.add_argument("-c", "--cc", required=True, help="CC image file.")
-    ap.add_argument("-m", "--mlo", required=True, help="MLO image file.")
+    ap.add_argument("-c", "--cc", 
+                    required=True,
+                    default= './samples/Calc-Test_P_00041_LEFT_CC.png',
+                    help="CC image file.")
+    ap.add_argument("-m", "--mlo",
+                    required=True,
+                    default= './samples/Calc-Test_P_00041_LEFT_MLO.png',
+                    help="MLO image file.")
     # ap.add_argument("-d", "--model", help="two-views detector model")
     # ap.add_argument("-a", "--aug", help="select to use translation augmentation: -a true")
 
@@ -176,6 +182,9 @@ def main():
 
     file_cc = args['cc']
     file_mlo = args['mlo']
+
+    print("CC image path:", file_cc)
+    print("MLO image path:", file_mlo)
 
     # Assign DEVICE
     if (DEVICE == "gpu") and torch.backends.cudnn.is_available():
@@ -195,8 +204,8 @@ def main():
     model = MyModel.load_2views_model()
 
 
-    file_cc = '/home/dpetrini/devel/DNN/pytorch/full_clf_2views/samples/Calc-Test_P_00041_LEFT_CC.png'
-    file_mlo = '/home/dpetrini/devel/DNN/pytorch/full_clf_2views/samples/Calc-Test_P_00041_LEFT_MLO.png'
+    #file_cc = '/home/dpetrini/devel/DNN/pytorch/full_clf_2views/samples/Calc-Test_P_00041_LEFT_CC.png'
+    #file_mlo = '/home/dpetrini/devel/DNN/pytorch/full_clf_2views/samples/Calc-Test_P_00041_LEFT_MLO.png'
 
     image = cv2.imread(file_cc, cv2.IMREAD_UNCHANGED)
 
