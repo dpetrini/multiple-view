@@ -35,6 +35,8 @@ optional arguments:
 ```
 Obs. Some sample files from CBIS-DDSM test set are included in samples folder for evaluation. Files were resized for network input. The results for ""...127..." images should be 0.1214 if selected CBIS-DDSM or 0.7873, if selectec VINDR-MAMMO.
 
+Tested for Python 3.12.3, PyTorch 2.8.0+cu126.
+
 Obs2. In order to perform test inference download all models from [link](https://drive.google.com/drive/folders/1aQqX2F5f62D2GZOeZmGrmPvwLy_tG9Tr?usp=sharing) and place it in "models" folder.
 
 New: the multiple-views models for CBIS-DDSM and VinDr-Mammo are now available at [Hugging Face](https://huggingface.co/dpetrini). Download and follow the instructions above.
