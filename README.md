@@ -25,16 +25,15 @@ optional arguments:
   -h, --help                    show this help message and exit
   -c CC, --cc CC                CC image file.
   -m MLO, --mlo MLO             MLO image file.
-  -t TYPE, --type TYPE          two-views paradigm PBC (default) or DC.
   -d DATASET, --data DATASET    select DATASET, CBIS-DDSM (default) or VINDR-MAMMO.
   
 ```
 
   Example:
 ```
-  python3 multi_view_clf_test.py  -c samples/Calc-Test_P_00041_LEFT_CC.png -m samples/Calc-Test_P_00041_LEFT_MLO.png
+  python3 multi_view_clf_test.py  -c samples/Calc-Test_P_00127_RIGHT_CC.png -m samples/Calc-Test_P_00127_RIGHT_MLO.png
 ```
-Obs. Some sample files from CBIS-DDSM test set are included in samples folder for evaluation. Files were resized for network input.
+Obs. Some sample files from CBIS-DDSM test set are included in samples folder for evaluation. Files were resized for network input. The results for ""...127..." images should be 0.1214 if selected CBIS-DDSM or 0.7873, if selectec VINDR-MAMMO.
 
 Obs2. In order to perform test inference download all models from [link](https://drive.google.com/drive/folders/1aQqX2F5f62D2GZOeZmGrmPvwLy_tG9Tr?usp=sharing) and place it in "models" folder.
 
@@ -48,6 +47,8 @@ numpy
 torch
 
 cv2
+
+timm
 
 
 ### Reference
