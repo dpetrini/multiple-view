@@ -2,11 +2,14 @@
 Multiple view inference models for breast cancer detection.
 This is the inference code of the Multiple View classifiers to classify the two mammography views at once. It was trained in CBIS-DDSM dataset and in VinDr-Mammo with original test split. It means that any pair of mammograms in test set can be used in this inference.
 
+### Breaking News! Source code update [year 2026]
+
+The full source code for our two-view breast cancer classifiers — an evolution of the work presented in our published papers — is now available as a new public repository: [https://github.com/dpetrini/multiple-view-src](https://github.com/dpetrini/multiple-view-src)
+
 ## Update: new source code inserted 
 
 Dataloaders for single-view and two-view. New in folder Dataloader.
 
-Keep watching this repository as more code will be added soon.
 If you have any inquire or request please use the issues tab.
 
 Also, check the library we use for training the models: [https://github.com/dpetrini/nova](https://github.com/dpetrini/nova)
